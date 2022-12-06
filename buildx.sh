@@ -54,7 +54,7 @@ function build {
     cp alfresco-share-base-distribution-*/amps/* target/amps
     sed -i '' 's/alfresco-base-tomcat:tomcat9-jre11-centos7.*/alfresco-base-tomcat:tomcat9-jre11-centos7-202209261711/g' Dockerfile
     docker buildx build . --load --platform linux/arm64 -t $REPOSITORY/alfresco-content-repository-community:$REPO_COM_VERSION
-    cd ../../..
+    cd ../../../..
   fi
 
   # Repository Enterprise
